@@ -1,7 +1,5 @@
-from flask import Flask
 import gradio as gr
 from huggingface_hub import InferenceClient
-app = Flask(__name__)
 # Initialize the client with the fine-tuned model
 client = InferenceClient("HuggingFaceH4/zephyr-7b-beta")  # Update if using another model
 
@@ -68,4 +66,4 @@ demo = gr.ChatInterface(
 )
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001)
+    demo.launch(server_name="0.0.0.0", server_port=5001)
