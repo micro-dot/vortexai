@@ -67,4 +67,4 @@ demo = gr.ChatInterface(
 )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(host="0.0.0.0", port=5001)
