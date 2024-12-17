@@ -1,8 +1,7 @@
 import gradio as gr
 from huggingface_hub import InferenceClient
 # Initialize the client with the fine-tuned model
-HF_API_TOKEN = "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"
-client = InferenceClient("HuggingFaceH4/zephyr-7b-beta", token=HF_API_TOKEN)
+client = InferenceClient("Qwen/Qwen2.5-Coder-32B-Instruct")
 # Function to validate inputs
 def validate_inputs(max_tokens, temperature, top_p):
     if not (1 <= max_tokens <= 32768):
